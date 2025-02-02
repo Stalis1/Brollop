@@ -1,0 +1,33 @@
+// globals.scss
+@import "tailwindcss";
+
+/* Reset/Normalize CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Arial', sans-serif; // Default font family
+    line-height: 1.5;
+    background-color: #fff; // Default background color
+    color: #333; // Default text color
+}
+
+/* Body Styling */
+body {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Utility classes */
+.container {
+    width: 100%;
+    max-width: 1200px; // Adjust as needed
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Add more global styles here as needed */

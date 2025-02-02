@@ -1,0 +1,25 @@
+{
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
+    "parserOptions": {
+        "babelOptions": {
+            "presets": ["next/babel"]
+        }
+    },
+    "rules": {
+        "semi": "off",
+        "eqeqeq": "error",
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "react/no-unstable-nested-components": "warn",
+        "react/jsx-boolean-value": "warn",
+        "react/button-has-type": "warn",
+        "import/no-cycle": "error"
+    },
+    "overrides": [
+        {
+            "files": ["*.test.tsx", "*.test.ts"],
+            "rules": {
+                "@typescript-eslint/no-non-null-assertion": "off"
+            }
+        }
+    ]
+}
