@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://mcr.microsoft.com/
-        username: ${{ secrets.AzureAppService_ContainerUsername_cef6d0f66c48431aa2f218e101bd114c }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_93fb15e43fbd4fa68730c4d674c98433 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_679dc6da5bf944c6bceb9e25f5aeca42 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_c57b61a1fe7240c48bc600213e74f38b }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_cef6d0f66c48431aa2f218e101bd114c }}/appsvc/staticsite:${{ github.sha }}
+        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_679dc6da5bf944c6bceb9e25f5aeca42 }}/appsvc/staticsite:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'wedding-web'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a2c6c64f5a454a56be81e15b3da3cd00 }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_cef6d0f66c48431aa2f218e101bd114c }}/appsvc/staticsite:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_081710299f3744778c5534cc7f4a3748 }}
+        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_679dc6da5bf944c6bceb9e25f5aeca42 }}/appsvc/staticsite:${{ github.sha }}'
