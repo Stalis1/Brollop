@@ -7,6 +7,7 @@ export const Header = ({ title, subTitle }: { title?: string; subTitle?: string 
             <h2 className="text-3xl">{subTitle}</h2>
             <div className="flex flex-row gap-4 items-center justify-center pt-4">
                 <MenuItem link="/" title="Välkommen"/>
+                <MenuItem link="/2" title="Välkommen2"/>
                 <MenuItem link="/" title="Bröllopet"/>
                 <MenuItem link="/info" title="Info"/>
                 <MenuItem link="/" title="Bilder"/>
