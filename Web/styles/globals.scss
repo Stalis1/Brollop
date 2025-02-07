@@ -1,5 +1,5 @@
 // globals.scss
-@import "tailwindcss";
+@use "tailwindcss" as *;
 
 /* Reset/Normalize CSS */
 *,
