@@ -1,5 +1,5 @@
 // globals.scss
-@import "tailwindcss";
+@use "tailwindcss" as *;
 
 /* Reset/Normalize CSS */
 *,
@@ -30,4 +30,7 @@ body {
     padding: 0 1rem;
 }
 
+h2 {
+    @apply text-3xl font-bold
+}
 /* Add more global styles here as needed */
