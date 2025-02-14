@@ -12,29 +12,33 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60)
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / (1000)) % 60)
       };
     }
-    return null;
+    return "Done";
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof calculateTimeLeft> | null>(null);
 
   useEffect(() => {
+    setTimeLeft(calculateTimeLeft()); // Ensure the state is set only on the client
+    
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
-  });
+  }, [targetDate]); // Dependency added to re-run effect if targetDate changes
 
-  if (!timeLeft) return <p>Countdown finished!</p>;
+  if (!timeLeft) return <></>;
+  if (timeLeft === 'Done') return <p>Countdown finished!</p>;
 
   return (
     <div className="flex flex-col items-center">
       <h2>Dagar kvar</h2>
       <p>
-        {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes}
+        {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} : {timeLeft.seconds}
       </p>
     </div>
   );
