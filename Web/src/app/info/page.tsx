@@ -8,8 +8,8 @@ export default Page;
 const BulletPoints = ({points}: {points: string[]}) => {
     return <div>
         <ul>
-            {points.map(x => {
-                return <BulletPoint text={x}/>
+            {points.map((x, index) => {
+                return <BulletPoint key={`point-${index}`} text={x}/>
             })}
         </ul>
     </div>

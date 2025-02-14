@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Countdown } from "../../components/countdown";
 import BackgroundImage from "../../components/image-with-text";
 

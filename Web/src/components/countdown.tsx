@@ -26,7 +26,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  });
 
   if (!timeLeft) return <p>Countdown finished!</p>;
 

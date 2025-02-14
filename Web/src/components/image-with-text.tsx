@@ -7,7 +7,7 @@ interface ImageWithTextProps {
   children: React.ReactNode;
 }
 
-const BackgroundImage: React.FC<ImageWithTextProps> = ({ imageSrc, text, height, children }) => {
+const BackgroundImage: React.FC<ImageWithTextProps> = ({ imageSrc, height, children }) => {
   return (
     <div className="relative w-full" style={{ height: `${height}px` }}>
       <Image 

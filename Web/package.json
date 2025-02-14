@@ -3,7 +3,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 8080",
-    "lint": "next lint"
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.3",
