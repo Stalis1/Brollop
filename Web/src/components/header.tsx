@@ -11,7 +11,7 @@ export const Header = ({ title, subTitle }: { title?: string; subTitle?: string 
                 <MenuItem link="/" title="Bröllopet"/>
                 <MenuItem link="/info" title="Info"/>
                 <MenuItem link="/" title="Bilder"/>
-                <MenuItem link="/" title="O.S.A"/>
+                <MenuItem link="/osa" title="O.S.A"/>
                 <MenuItem link="/" title="Gästbok"/>
                 <MenuItem link="/" title="Kontakt"/>
                 <MenuItem link="/" title="Önskelista"/>
