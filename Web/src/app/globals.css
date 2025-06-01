@@ -1,1 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-peach: #fecba5;
+  --color-peach-light: #FFF5ED;
+  --color-peach-dark: #D89C84;
+  --color-dark: #333333;
+}

@@ -11,7 +11,7 @@
 html, body {
     font-family: 'Arial', sans-serif; // Default font family
     line-height: 1.5;
-    background-color: #fff; // Default background color
+    background-color: #fecba5; // Default background color
     color: #333; // Default text color
 }
 
@@ -28,9 +28,5 @@ body {
     max-width: 1200px; // Adjust as needed
     margin: 0 auto;
     padding: 0 1rem;
-}
-
-h2 {
-    @apply text-3xl font-bold
 }
 /* Add more global styles here as needed */
