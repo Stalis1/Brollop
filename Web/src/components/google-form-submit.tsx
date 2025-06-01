@@ -36,17 +36,28 @@ export const GoogleFormSubmit = () => {
     return submitted ? (
         <p>Tack för ert svar!</p>
     ) : (
-        <form className="grid grid-cols-2 gap-2" onSubmit={handleSubmit}>
-            <input className="bg-white rounded-sm" name="name" placeholder="Namn" required />
-            <input className="bg-white rounded-sm" name="email" placeholder="Epost" type="email" required />
-            <select className="bg-white rounded-sm" name="feedback" required>
-                <option value="Ja">Ja, jag kommer!</option>
-                <option value="Nej">Nej, jag kan tyvärr inte.</option>
-            </select>
-            <div className="flex justify-end items-end">
-                <button className="bg-white rounded-sm" type="submit">
-                    Submit
-                </button>
+        <form onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-4 w-full">
+                <div className="flex flex-col">
+                    <label className="text-left font-bold">Namn</label>
+                    <input className="bg-white p-3 rounded-sm" name="name" placeholder="Namn" required />
+                </div>
+                <div className="flex flex-col">
+                    <label className="text-left font-bold">Epost</label>
+                    <input className="bg-white p-3 rounded-sm" name="email" placeholder="Epost" type="email" required />
+                </div>
+                <div className="flex flex-col">
+                    <label className="text-left font-bold">Kommer du?</label>
+                    <select className="bg-white p-3 rounded-sm" name="feedback" required>
+                        <option value="Ja">Ja, jag kommer!</option>
+                        <option value="Nej">Nej, jag kan tyvärr inte.</option>
+                    </select>
+                </div>
+                <div className="flex justify-center">
+                    <button className="bg-white p-2 rounded-sm cursor-pointer font-bold" type="submit">
+                        Skicka
+                    </button>
+                </div>
             </div>
         </form>
     );

@@ -1,10 +1,9 @@
-import { GoogleFormSubmit } from '../../components/google-form-submit';
+import { OsaBoard } from '../../components/board/osa-board ';
 
 export default function Page() {
     return (
-        <div className="flex flex-col items-center pt-4">
-            <h1 className="text-4xl pb-4">OSA</h1>
-            <GoogleFormSubmit />
+        <div className="flex justify-center pt-4">
+            <OsaBoard />
         </div>
     );
 }
