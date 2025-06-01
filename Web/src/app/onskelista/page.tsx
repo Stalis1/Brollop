@@ -1,9 +1,9 @@
-import { InformationBoard } from '../../components/board/information-board';
+import { WishlistBoard } from '../../components/board/wishlist-board';
 
 const Page = () => {
     return (
         <div className="flex justify-center pt-4">
-            <InformationBoard />
+            <WishlistBoard />
         </div>
     );
 };

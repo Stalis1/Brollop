@@ -35,8 +35,8 @@ export const Header = () => {
                 <MenuItem link="/2" title="Välkommen2" remove />
                 <MenuItem link="/info" title="Info" />
                 <MenuItem link="/osa" title="O.S.A" />
-                <MenuItem link="/" title="Kontakt" />
-                <MenuItem link="/" title="Önskelista" />
+                <MenuItem link="/kontakt" title="Kontakt" />
+                <MenuItem link="/onskelista" title="Önskelista" />
             </div>
         </div>
     );
