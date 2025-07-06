@@ -1,5 +1,6 @@
 // globals.scss
 @use "tailwindcss" as *;
+@import 'geomanist';
 
 /* Reset/Normalize CSS */
 *,
@@ -9,7 +10,7 @@
 }
 
 html, body {
-    font-family: 'Arial', sans-serif; // Default font family
+    font-family: 'Geomanist', sans-serif;
     line-height: 1.5;
     background-color: #fecba5; // Default background color
     color: #333; // Default text color

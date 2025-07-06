@@ -29,7 +29,7 @@ const color = softMonochrome;
 
 export const Header = () => {
     return (
-        <div className={`flex flex-col justify-center text-center p-1 bg-[#3B3B3B] text-[#FFFFFF]`}>
+        <div className={`flex flex-col justify-center text-center p-2 bg-[#FFF5ED] text-black`}>
             <div className="flex flex-row gap-4 items-center justify-center">
                 <MenuItem link="/" title="Välkommen" />
                 <MenuItem link="/2" title="Välkommen2" remove />
