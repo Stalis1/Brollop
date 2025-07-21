@@ -14,7 +14,7 @@ export default function Page() {
                     </div>
                 </div>
             </BackgroundImage> */}
-            <Image className="m-4" src={'/Pose.jpg'} alt={'alt'} width={800} height={450} />
+            <Image className="m-4" src={'/SmileCropped.jpg'} alt={'alt'} width={700} height={450} />
             <div className="text-3xl">01 juli 2026</div>
             <Countdown targetDate="2026-07-01 12:00:00" />
         </div>
