@@ -13,12 +13,21 @@ export const ContactBoard = () => {
                 <BulletPoints points={['Telefonnummer: 0708 50 90 69', 'Epost: gabriellaandersson_@hotmail.com']} />
             </Section>
             <Line />
+            <Section title="Toastmasters">
+                <Section title="Henrik Ramström">
+                    <BulletPoints points={['Telefonnummer: 0707 36 60 11', 'Epost: XXX']} />
+                </Section>
+                <Section title="Rebecca Svensson">
+                    <BulletPoints points={['Telefonnummer: XXX', 'Epost: XXX']} />
+                </Section>
+            </Section>
+            <Line />
             <Section title="Lillegårds (Bröllopslokal)">
                 <BoardLink link={'https://www.lillegards.se'} title={'https://www.lillegards.se'} />
                 <BulletPoints points={['Telefonnummer: 0704 48 77 06', 'Epost: hej@lillegards.se']} />
             </Section>
             <Line />
-            <div className="text-red-700 flex flex-col">Blomsterpågen, Segers mat, bestman, brudtärna, toastmasters, brudföräldrar, brudgumföräldrar</div>
+            <div className="text-red-700 flex flex-col">Blomsterpågen, Segers mat, bestman, brudtärna, brudföräldrar, brudgumföräldrar?</div>
         </Board>
     );
 };
