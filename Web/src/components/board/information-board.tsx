@@ -19,12 +19,14 @@ export const InformationBoard = () => {
             </Section>
             <Line />
             <Section title="Boende">
-                Det är begränsade möjligheter till boende på gården som vi kommer erbjuda till utvalda gäster. Om ni inte väljer att tälta är det hotell/BB
-                eller liknande som gäller. Det finns lite ställen runtomkring på landet, annars är Lund bara ca 20 min bil bort (eller 45 min cykel för den
-                delen).
+                <div className="text-red-600">Kolla boenden och lägg in länkar</div>
+                Det är begränsade möjligheter till boende på gården. Det hotell/BB eller liknande som gäller. Det finns lite ställen runtomkring på landet,
+                annars är Lund bara ca 20 min bil bort (eller 45 min cykel).
             </Section>
             <Line />
-            <Section title="Transport">Vi anordnar ingen gemensam transport.</Section>
+            <Section title="Transport">Vigsel och fest är på samma plats. Transport annordnas själv.</Section>
+            <Line />
+            <Section title="Tal">Om du vill hålla tal behöver du kontakta toastmasters i förväg.</Section>
             <Line />
             <Section title="Schema">
                 <BulletPoints

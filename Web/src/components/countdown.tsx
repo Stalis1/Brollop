@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 interface CountdownProps {
     targetDate: string; // Format: "YYYY-MM-DD HH:mm:ss"
     textColor?: 'white' | 'dark';
+    className?: string;
 }
 
-export const Countdown: React.FC<CountdownProps> = ({ targetDate, textColor = 'white' }) => {
+export const Countdown: React.FC<CountdownProps> = ({ className, targetDate, textColor = 'white' }) => {
     const calculateTimeLeft = () => {
         const difference = new Date(targetDate).getTime() - new Date().getTime();
         if (difference > 0) {
@@ -36,7 +37,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate, textColor = 'w
     if (timeLeft === 'Done') return <p>Countdown finished!</p>;
 
     return (
-        <div className={`flex flex-col items-center ${textColor === 'white' ? '' : 'text-dark'}`}>
+        <div className={`flex flex-col items-center ${textColor === 'white' ? '' : 'text-dark'} ${className}`}>
             <h2 className="text-3xl font-bold">Dagar kvar</h2>
             <p>
                 {timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} : {timeLeft.seconds}

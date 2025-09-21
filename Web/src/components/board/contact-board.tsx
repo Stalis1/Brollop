@@ -15,10 +15,10 @@ export const ContactBoard = () => {
             <Line />
             <Section title="Toastmasters">
                 <Section title="Henrik Ramström">
-                    <BulletPoints points={['Telefonnummer: 0707 36 60 11', 'Epost: XXX']} />
+                    <BulletPoints points={['Telefonnummer: 0707 36 60 11', 'Epost: henrik.ramstroom@gmail.com']} />
                 </Section>
                 <Section title="Rebecca Svensson">
-                    <BulletPoints points={['Telefonnummer: XXX', 'Epost: XXX']} />
+                    <BulletPoints points={['Telefonnummer: 0761 08 04 40', 'Epost: rebecca.svensson@kreol.se']} />
                 </Section>
             </Section>
             <Line />
