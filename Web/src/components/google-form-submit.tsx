@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { Line } from './board/board';
 
-const nameField = 'entry.1451036258';
-const emailField = 'entry.1624706029';
-const feedbackField = 'entry.1927318134';
-const allergyField = 'entry.1077835282';
+const nameId = 'entry.1451036258';
+const emailId = 'entry.1624706029';
+const feedbackId = 'entry.1927318134';
+const allergyId = 'entry.1077835282';
 
 const fieldName = 'name';
 const fieldEmail = 'email';
@@ -24,10 +24,10 @@ const submit = async (applications: Application[]) => {
     const defaultEmail = applications[0].email;
     applications.forEach(async (element) => {
         const data = new URLSearchParams();
-        data.append(nameField, element.name);
-        data.append(emailField, element.email ?? defaultEmail);
-        data.append(feedbackField, element.feedback);
-        data.append(allergyField, element.allergy ?? '');
+        data.append(nameId, element.name);
+        data.append(emailId, element.email ?? defaultEmail);
+        data.append(feedbackId, element.feedback);
+        data.append(allergyId, element.allergy ?? '');
         await fetch('https://docs.google.com/forms/u/0/d/1rQ5bDWwrt0YiBaKckmQegS-FFTi93xtcj_fRU95dylI/formResponse', {
             method: 'POST',
             mode: 'no-cors',
