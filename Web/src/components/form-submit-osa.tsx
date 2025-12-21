@@ -13,6 +13,8 @@ const fieldEmail = 'email';
 const fieldFeedback = 'feedback';
 const fieldAllergy = 'allergy';
 
+const formUrl = 'https://docs.google.com/forms/u/0/d/1rQ5bDWwrt0YiBaKckmQegS-FFTi93xtcj_fRU95dylI/formResponse'
+
 interface Application {
     name: string;
     email?: string;
@@ -28,7 +30,7 @@ const submit = async (applications: Application[]) => {
         data.append(emailId, element.email ?? defaultEmail);
         data.append(feedbackId, element.feedback);
         data.append(allergyId, element.allergy ?? '');
-        await fetch('https://docs.google.com/forms/u/0/d/1rQ5bDWwrt0YiBaKckmQegS-FFTi93xtcj_fRU95dylI/formResponse', {
+        await fetch(formUrl, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
@@ -90,7 +92,7 @@ const FormPerson = ({
     </>
 );
 
-export const GoogleFormSubmit = () => {
+export const FormSubmitOSA = () => {
     const [submitted, setSubmitted] = useState(false);
     const [applications, setApplications] = useState<Application[]>([{ name: '', email: '', feedback: 'Ja' }]);
 
