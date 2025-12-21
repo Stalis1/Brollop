@@ -9,6 +9,7 @@ export const Header = () => {
                 <MenuItem link="/osa" title="O.S.A" />
                 <MenuItem link="/kontakt" title="Kontakt" />
                 <MenuItem link="/onskelista" title="Önskelista" />
+                <MenuItem link="/tal" title="Tal" />
             </div>
         </div>
     );

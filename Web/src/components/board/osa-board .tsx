@@ -1,4 +1,4 @@
-import { GoogleFormSubmit } from '../google-form-submit';
+import { FormSubmitOSA } from '../form-submit-osa';
 import { Board, Line } from './board';
 
 export const OsaBoard = () => {
@@ -7,7 +7,7 @@ export const OsaBoard = () => {
             <h1 className="text-4xl">OSA</h1>
             <Line />
             <div className="my-4 p-4 bg-peach">
-                <GoogleFormSubmit />
+                <FormSubmitOSA />
             </div>
         </Board>
     );
