@@ -28,10 +28,12 @@ export const BulletPoints = ({ points }: { points: string[] }) => {
 
 export const BulletPoint = ({ text }: { text: string }) => {
     return (
-        <li className="flex items-center space-x-2">
-            <span className="h-2 w-2 rounded-full bg-neutral-800"></span>
-            <span>{text}</span>
+            <span className="break-all">
+        <li className="flex items-center space-x-2 min-w-0">
+                <span className="h-2 w-2 rounded-full bg-neutral-800"></span>
+                <span>{text}</span>
         </li>
+            </span>
     );
 };
 

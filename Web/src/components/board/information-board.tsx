@@ -26,6 +26,8 @@ export const InformationBoard = () => {
             <Line />
             <Section title='Vigsel'>Under vigseln är det mobilförbud - vi vill att alla är närvarande och se era ansikten istället för telefoner. Vi har fotograf på plats för att ta foton. </Section>
             <Line />
+            <Section title='Barn'>Vi gillar era barn men just denna kväll ser vi gärna att ni lämnar dem hemma.</Section>
+            <Line />
             <Section title="Schema">
                 <BulletPoints
                     points={[
