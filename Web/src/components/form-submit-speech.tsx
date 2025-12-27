@@ -2,20 +2,23 @@
 
 import { useState } from 'react';
 
-const nameId = 'entry.54133553';
-const emailId = 'entry.1431017371';
+const nameId = 'entry.767727627';
+const emailId = 'entry.403355830';
+const phoneNumberId = 'entry.382199556'
 
-const formUrl = 'https://docs.google.com/forms/u/0/d/1XF7Ed7Apc1vuQqXU42tz_l-S7Cbk3NIX-qt_ZXFgRhY/formResponse'
+const formUrl = 'https://docs.google.com/forms/u/0/d/1O0rrYuxnjeqYudBQYsKbbtRTxxLANRFbSqY2eTK_HyU/formResponse'
 
 interface Application {
     name: string;
     email?: string;
+    phoneNumber?: string
 }
 
 const submit = async (application: Application) => {
     const data = new URLSearchParams();
     data.append(nameId, application.name);
     data.append(emailId, application.email);
+    data.append(phoneNumberId, application.phoneNumber);
     await fetch(formUrl, {
         method: 'POST',
         mode: 'no-cors',
@@ -28,7 +31,7 @@ const submit = async (application: Application) => {
 
 export const FormSubmitSpeech = () => {
     const [submitted, setSubmitted] = useState(false);
-    const [application, setApplication] = useState<Application>({ name: '', email: '' });
+    const [application, setApplication] = useState<Application>({ name: '', email: '', phoneNumber: '' });
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -67,6 +70,20 @@ export const FormSubmitSpeech = () => {
                         type="email"
                         required
                         onChange={(e) => setApplication({...application, email : e.target.value})}
+                    />
+                </div>
+                <div className='flex flex-col'>
+                    <label className="text-left font-bold">
+                        Telefonnummer
+                        <span className="text-red-500"> *</span>
+                    </label>
+                    <input
+                        className="bg-white p-3 rounded-sm"
+                        placeholder="Telefonnummer"
+                        type="tel"
+                        pattern="^[0-9+\s()-]{6,20}$"
+                        required
+                        onChange={(e) => setApplication({...application, phoneNumber : e.target.value})}
                     />
                 </div>
                 <div className="flex justify-between items-center mt-4">
