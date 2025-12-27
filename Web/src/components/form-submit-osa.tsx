@@ -7,11 +7,13 @@ const nameId = 'entry.1451036258';
 const emailId = 'entry.1624706029';
 const feedbackId = 'entry.1927318134';
 const allergyId = 'entry.1077835282';
+const alcoholId = 'entry.1077665470';
 
 const fieldName = 'name';
 const fieldEmail = 'email';
 const fieldFeedback = 'feedback';
 const fieldAllergy = 'allergy';
+const fieldAlcohol = 'alcohol';
 
 const formUrl = 'https://docs.google.com/forms/u/0/d/1rQ5bDWwrt0YiBaKckmQegS-FFTi93xtcj_fRU95dylI/formResponse'
 
@@ -20,6 +22,7 @@ interface Application {
     email?: string;
     feedback: 'Ja' | 'Nej';
     allergy?: string;
+    alcohol: 'Ja' | 'Nej';
 }
 
 const submit = async (applications: Application[]) => {
@@ -30,6 +33,7 @@ const submit = async (applications: Application[]) => {
         data.append(emailId, element.email ?? defaultEmail);
         data.append(feedbackId, element.feedback);
         data.append(allergyId, element.allergy ?? '');
+        data.append(alcoholId, element.alcohol);
         await fetch(formUrl, {
             method: 'POST',
             mode: 'no-cors',
@@ -83,6 +87,13 @@ const FormPerson = ({
             <input className="bg-white p-3 rounded-sm" name={fieldAllergy} onChange={(e) => onChange(index, fieldAllergy, e.target.value)} />
         </div>
         <div className="flex flex-col">
+            <label className="text-left font-bold">Vill du ha alkohol till maten?</label>
+            <select className="bg-white p-3 rounded-sm" name="feedback" required onChange={(e) => onChange(index, fieldAlcohol, e.target.value)}>
+                <option value="Ja">Ja tack!</option>
+                <option value="Nej">Nej tack!</option>
+            </select>
+        </div>
+        <div className="flex flex-col">
             <label className="text-left font-bold">Kommer du?</label>
             <select className="bg-white p-3 rounded-sm" name="feedback" required onChange={(e) => onChange(index, fieldFeedback, e.target.value)}>
                 <option value="Ja">Ja, jag kommer!</option>
@@ -94,10 +105,10 @@ const FormPerson = ({
 
 export const FormSubmitOSA = () => {
     const [submitted, setSubmitted] = useState(false);
-    const [applications, setApplications] = useState<Application[]>([{ name: '', email: '', feedback: 'Ja' }]);
+    const [applications, setApplications] = useState<Application[]>([{ name: '', email: '', feedback: 'Ja', alcohol: 'Ja' }]);
 
     const handleAddApplication = () => {
-        setApplications([...applications, { name: '', email: undefined, feedback: 'Ja' }]);
+        setApplications([...applications, { name: '', email: undefined, feedback: 'Ja', alcohol: 'Ja' }]);
     };
 
     const handleInputChange = (index: number, field: string, value: string) => {

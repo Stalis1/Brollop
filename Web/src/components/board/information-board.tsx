@@ -6,7 +6,7 @@ export const InformationBoard = () => {
             <h1 className="text-4xl">Information</h1>
             <Line />
             <Section title="Tid och plats">
-                <BulletPoints points={['Adress: Fredriksrovägen 85, 244 91 Kävlinge', 'Datum: 1 juli 2026', 'Tid: TBD']} />
+                <BulletPoints points={['Adress: Fredriksrovägen 85, 244 91 Kävlinge', 'Datum: Onsdag 1 juli 2026', 'Vigsel: 15:30']} />
             </Section>
             <Line />
             <Section title="Klädkod">
