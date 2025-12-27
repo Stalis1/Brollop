@@ -44,7 +44,7 @@ export const ContactBoard = () => {
                 <Person person={{title: 'Henrik Ramström', img: '/ramstrom-sausage.jpg'}}>
                     <BulletPoints points={['0707 36 60 11', 'henrik.ramstroom@gmail.com']} />
                 </Person>
-                <Person person={{title: 'Rebecca Svensson'}}>
+                <Person person={{title: 'Rebecca Svensson', img: '/rebecca-owl.jpg'}}>
                     <BulletPoints points={['0761 08 04 40', 'rebecca.svensson@kreol.se']} />
                 </Person>
             </Section>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 export const Board = ({ children }: { children: React.ReactNode }) => (
-    <div className="flex flex-col bg-peach-light rounded-2xl gap-2 text-dark text-center w-full sm:max-w-lg mx-auto px-4 break-words">{children}</div>
+    <div className="flex flex-col bg-peach-light rounded-2xl gap-2 text-dark text-center w-full sm:max-w-lg mx-auto px-4 break-words mb-5">{children}</div>
 );
 
 export const Line = () => <hr className="h-px bg-peach-dark/20 border-0" />;
